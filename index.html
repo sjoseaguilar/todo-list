@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do list</title>
+
+    <style>
+      .header{
+        display: flex;
+        justify-content: center;
+        font-family:'Franklin Gothic Medium';
+        font-size:xx-large;
+      }
+      .functionality{
+        display: flex;
+        justify-content: center;
+        font-family:'Franklin Gothic Medium';
+        font-size:x-large;
+      }
+      .instructions{
+        display: flex;
+        justify-content: center;
+        font-family:'Arial Narrow';
+        font-size: larger;
+        
+      }
+      .formStyle{
+        display: flex;
+        justify-content: center;
+        
+      }
+      .todos {
+        display: flex;
+        justify-content: center;
+      }
+      .todo-uncheck {
+        position:static;
+        align-items: center;
+        height: 40px;
+        width: 80%;
+        background: blue;
+        color: lightblue;
+        border-color: darkblue;
+        border-radius: 5px; 
+      }
+      .todo-check {
+        position: relative;
+        align-items: center;
+        height: 40px;
+        width: 80%;
+        background: green;
+        color: lightblue;
+        border-color:darkgreen;
+        border-radius: 5px;
+      }
+      .delete-button {
+        position: relative;
+        top: 10px;
+        bottom: 0px;
+        height: 0px;
+        left: -40px;
+        color: lightcyan;
+        background: blue;
+        border: none;
+      }
+      #todoinput{
+        font-weight: bold;
+        opacity: 0.5;
+        width: 50%;
+      }
+    </style>
+    
+  </head>
+  <body>
+      <h1 class="header">TO-DO LIST</h1>
+      <p class="functionality">Functionality of the website</p>
+      <ol>
+          <li class="instructions">1. Enter text into the input field to add items to your list.</li>
+          <li class="instructions">2. Click the item to mark it as complete.</li>
+          <li class="instructions">3. Click the "X" to remove the item from your list.</li>
+      </ol>
+    
+    <form class = "formStyle" id="todoform" action="">
+      <input id="todoinput" type="text" minlength="3" placeholder="New item..." />
+      <button id="btn" type="submit"><img src="img/editIcon.png" height="20" width="20"></button>
+    </form>
+    <div id="todolist" class="list"></div>
+
+    <script src="dist/index.js"></script>
+  </body>
+</html>
